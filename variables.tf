@@ -6,3 +6,6 @@ variable "irsa_name" {
 
 variable "cluster_name" {
 }
+
+variable "namespace" {
+}
