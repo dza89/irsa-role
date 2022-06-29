@@ -2,11 +2,6 @@
 
 ## Helm example
 
-### 1. Generate a key pair
-
-
-### 2. Provision the AWS resources
-
 Run Terraform with the example configuration.
 
 ```tf
