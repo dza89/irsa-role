@@ -19,7 +19,7 @@ data "aws_iam_policy_document" "irsa" {
     condition {
       test     = "StringEquals"
       variable = "${replace(data.aws_iam_openid_connect_provider.cluster.url, "https://", "")}:sub"
-      values   = ["system:serviceaccount:cpt:${var.irsa_name}"]
+      values   = ["system:serviceaccount:${var.namespace}:${var.irsa_name}"]
     }
 
     principals {
