@@ -11,7 +11,7 @@ module "aws_load_balancer_controller" {
   policy_body  = tostring(file("${path.module}/aws-policy.json"))
   irsa_name    = "aws-load-balancer-controller"
   cluster_name = var.cluster_name
-  namespace = helm_release.aws_load_balancer_controller.metadata[0].namespace
+  namespace    = helm_release.aws_load_balancer_controller.metadata[0].namespace
 }
 
 resource "helm_release" "aws_load_balancer_controller" {
