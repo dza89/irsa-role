@@ -6,7 +6,7 @@ Run Terraform with the example configuration.
 
 ```tf
 module "aws_load_balancer_controller" {
-  source = "dza89/irsa"
+  source = "dza89/role/irsa"
 
   policy_body  = tostring(file("${path.module}/aws-policy.json"))
   irsa_name    = "aws-load-balancer-controller"
