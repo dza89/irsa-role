@@ -15,10 +15,9 @@ module "aws_load_balancer_controller" {
 
 resource "helm_release" "aws_load_balancer_controller" {
   name             = "aws-load-balancer-controller"
-  max_history      = 3
   repository       = "https://aws.github.io/eks-charts"
   chart            = "aws-load-balancer-controller"
-  namespace        = "cpt"
+  namespace        = "kube-system"
   create_namespace = "true"
   wait             = true
   version          = var.aws_load_balancer_controller_version
