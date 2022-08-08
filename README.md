@@ -1,5 +1,7 @@
 # Getting Started
 
+See [here](https://registry.terraform.io/modules/dza89/role/irsa/latest)
+
 ## Helm example
 
 Run Terraform with the example configuration.
